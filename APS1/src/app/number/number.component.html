@@ -1,17 +1,53 @@
 <div>
-<h1></h1>
+  <h1>Digite o nome dos participantes e seus números</h1>
 
   <div class="participante">
-    Digite o nome do 
-    <div class="particpante__name">Nome Participante 1:
-      <input class="particpante__name-input">
+    <div class="particpante__name">Participante 1:
+      <input class="particpante__name-input">    Numeros:
+      <input type="number" [(ngModel)]="numbers1" id="1p1" class="num" min="1" max="60" required />
     </div>
-    <input type="number" class="participante__n1"/>
-    <input type="number" class="participante__n2"/>
-    <input type="number" class="participante__n3"/>
-    <input type="number" class="participante__n4"/>
-    <input type="number" class="participante__n5"/>
-    <input type="number" class="participante__n6"/>
-
+    <!-- <div class="particpante__name">Participante 2:
+      <input class="particpante__name-input">Numeros:
+      <input type="number" id="2p1" class="num" min="1" max="60" maxlength="2"/>
+      <input type="number" id="2p2" class="num" min="1" max="60"/>
+      <input type="number" id="2p3" class="num" min="1" max="60"/>
+      <input type="number" id="2p4" class="num" min="1" max="60"/>
+      <input type="number" id="2p5" class="num" min="1" max="60"/>
+      <input type="number" id="2p6" class="num" min="1" max="60"/>
+    </div>
+    <div class="particpante__name">Participante 3:
+      <input class="particpante__name-input"> Numeros:
+      <input type="number" id="3p1" class="num" min="1" max="60"/>
+      <input type="number" id="3p2" class="num" min="1" max="60"/>
+      <input type="number" id="3p3" class="num" min="1" max="60"/>
+      <input type="number" id="3p4" class="num" min="1" max="60"/>
+      <input type="number" id="3p5" class="num" min="1" max="60"/>
+      <input type="number" id="3p6" class="num" min="1" max="60"/>
+    </div> -->
+    <div class="particpante__name">
+    Quantidade de jogos:<input type="number" id="qtdSorteios" class="num" min="1" max="20"/>
+      <button type="button" name="button" >Sortear</button>
+    </div>
+    
   </div>
+
+
+  <ul>
+    <li *ngFor="let sorteio of sorteios">
+      Jogo{{sorteio}}
+    </li>
+  </ul>
+
+  <!-- <div *ngFor="let participante of n">
+    <span>Aluno: {{ participante.name }}</span>
+    <div *ngFor="let classItem of aluno.class">
+      <div *ngFor="let idioma of classItem | keyvalue">
+        {{idioma.key}}
+        <div *ngFor="let item of idioma.value">
+          {{item.id}} - {{item.code}}
+        </div>
+      </div>
+    </div>
+  </div> -->
+
 </div>

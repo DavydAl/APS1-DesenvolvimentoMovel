@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { NumberComponent } from './number/number.component';
 import { IntegrantesComponent } from './integrantes/integrantes.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { IntegrantesComponent } from './integrantes/integrantes.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

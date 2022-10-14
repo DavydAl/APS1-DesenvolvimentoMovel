@@ -3,10 +3,22 @@
   margin: 3px;
   display: flex;
   flex-direction: column;
+  font-weight: bold;
+  color: rgb(17, 91, 5);
 }
 
 .navbar-menu{
   display: flex;
   flex-direction: row;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+.nav-link{
+  color: rgb(17, 91, 5);
 }
 
+.nav-link:hover {
+  color: #fff;
+  background-color: rgb(126, 197, 126);
+}
