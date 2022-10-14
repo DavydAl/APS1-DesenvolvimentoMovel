@@ -1,0 +1,39 @@
+*{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.integrantes{
+  display: flex;
+  flex-direction:row;
+}
+
+h1{
+  padding: 2%;
+}
+
+.alunos{
+  width: 400PX;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 200px;
+}
+
+.midias{
+  display: flex;
+  flex-direction:row;
+  float: inline-end;
+}
+
+.midia{
+  width: 40px;
+  border-radius: 14px;
+  margin: 10px;
+
+}
