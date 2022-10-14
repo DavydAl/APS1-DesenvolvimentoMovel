@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Participante } from './participante';
 
 @Component({
   selector: 'app-number',
@@ -7,25 +8,41 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NumberComponent implements OnInit {
-  private numbers = ["1", "50", "3", "4", "60", "6", "7", "8", "9", "10", "45", "25", "3", "14", "15", "16", "17", "18"];
-  private qtdSorteios = 5;
-  private sorteios = new Array();
-  private sorteio = new Array();
+  public participantes: Participante[] = [];
+  public qtdSorteios = 3;
+  public sorteios: Array<Array<number>> = [];
+  private sorteio: Array<number> = [];
   constructor() { }
 
   ngOnInit(): void {
+    for (let index = 0; index < 3; index++) {
+      let oParticipante = new Participante;
+      oParticipante.nome = "Pariticipante " + (index + 1).toString();
+      this.participantes.push(oParticipante);
+    }  
   }
+
 
   Sortear(): void {
     if (true) {
-      //se nao fort igual ele adiciona. VCom toda certeza vai ter que ser feito um loop para validar.   
-      for (var q = 1; q <= this.qtdSorteios; q++) {
+      this.sorteios = [];
+      let numbers: number[] = [];
+      this.participantes.forEach(participante => {
+        numbers.push(participante.number_1);
+        numbers.push(participante.number_2);
+        numbers.push(participante.number_3);
+        numbers.push(participante.number_4);
+        numbers.push(participante.number_5);
+        numbers.push(participante.number_6);
+      });
+   
+      for (var q = 0; q <= this.qtdSorteios - 1; q++) {
         for (var i = 0; i < 6; i++) {
-          let _random = Math.floor(Math.random() * this.numbers.length);
-          this.sorteio.push(this.numbers[_random]);
+          let _random = Math.floor(Math.random() * numbers.length);
+          this.sorteio.push(numbers[_random]);
         }
-        this.sorteio = [];
         this.sorteios.push(this.sorteio);
+        this.sorteio = [];
       }
     }
   }
