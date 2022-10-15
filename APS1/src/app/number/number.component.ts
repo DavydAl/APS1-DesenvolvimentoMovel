@@ -15,7 +15,7 @@ export class NumberComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    for (let index = 0; index < 3; index++) {
+    for (let index = 0; index < 20; index++) {
       let oParticipante = new Participante;
       oParticipante.nome = "Pariticipante " + (index + 1).toString();
       this.participantes.push(oParticipante);

@@ -5,6 +5,7 @@ import { IntegrantesComponent } from './integrantes/integrantes.component';
 import { NumberComponent } from './number/number.component';
 
 const routes: Routes = [
+  {path: '', component: IntegrantesComponent},
   {path: 'integrantes', component: IntegrantesComponent},
   {path: 'number', component : NumberComponent}];
 
